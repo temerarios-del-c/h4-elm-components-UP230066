@@ -8,13 +8,16 @@ joinWords : String -> String -> String
 joinWords str1 str2 =
     str1 ++ str2
 
+
 isUpperChars : List Char -> List Bool
 isUpperChars chars =
     List.map Char.isUpper chars
 
+
 evalChars : List Char -> (Char -> Bool) -> List Bool
 evalChars chars predicate =
     List.map predicate chars
+
 
 headers : String -> Html msg
 headers content =
@@ -26,6 +29,7 @@ headers content =
         , h5 [] [ text content ]
         , h6 [] [ text content ]
         ]
+
 
 hyperlink : String -> String -> Html msg
 hyperlink url linkText =
